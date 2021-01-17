@@ -3,8 +3,8 @@ var dbURI = "mongodb+srv://mekan32:4526@mekan32.anf0m.mongodb.net/mekan32?retryW
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
+mongoose.connect(dbURI, {useNewUrlParser: true}); 
  
-
 mongoose.connection.on('connected', function () {
   console.log('Mongoose ' + dbURI+ 
     ' adresindeki veritabanına bağlandı\n');
